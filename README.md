@@ -1,4 +1,5 @@
 # mamohr/centos-java
+
 This is a simple docker image for Oracle Java 8 based on a centos 7 image.
 
 # Supported tags and respective `Dockerfile` links

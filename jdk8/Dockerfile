@@ -1,7 +1,7 @@
 FROM centos:7
-MAINTAINER Mario Mohr, mohr.mario@gmail.com
+MAINTAINER Mario Mohr <mohr.mario@gmail.com>
 
-ENV JAVA_VERSION 8u65
+ENV JAVA_VERSION 8u66
 ENV BUILD_VERSION b17
 
 # Upgrading system
