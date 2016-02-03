@@ -1,8 +1,8 @@
 FROM centos:7
 MAINTAINER Mario Mohr <mohr.mario@gmail.com>
 
-ENV JAVA_VERSION 8u66
-ENV BUILD_VERSION b17
+ENV JAVA_VERSION 8u72
+ENV BUILD_VERSION b15
 
 # Upgrading system
 RUN yum -y update && \
