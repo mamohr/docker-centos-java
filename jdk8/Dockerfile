@@ -1,13 +1,14 @@
 FROM centos:7
 MAINTAINER Mario Mohr <mohr.mario@gmail.com>
 
-ENV JAVA_VERSION 8u112
-ENV BUILD_VERSION b15
+ENV JAVA_VERSION 8u162
+ENV BUILD_VERSION b12
+ENV DOWNLOAD_LINK "http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-linux-x64.rpm"
 
 # Upgrading system
 RUN yum -y update && \
     yum -y install wget && \
-    wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/$JAVA_VERSION-$BUILD_VERSION/jdk-$JAVA_VERSION-linux-x64.rpm" -O /tmp/jdk-8-linux-x64.rpm && \
+    wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=xxx; oraclelicense=accept-securebackup-cookie" "$DOWNLOAD_LINK" -O /tmp/jdk-8-linux-x64.rpm && \
     yum -y install /tmp/jdk-8-linux-x64.rpm && \
     rm -f /tmp/jdk-8-linux-x64.rpm && \
     yum clean all
